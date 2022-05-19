@@ -41,29 +41,29 @@ const _handleSubmit = (event) => {
 } 
 return (
     <div className="signupformContainer">
-        <h2 className="form-header">Join the guild!</h2>
-        <h3 className="form-subheader">Receive loot, the latest news & early-access
-        to the upcoming games.</h3>
-        <div className>
-            <form onSubmit={ _handleSubmit }>
-                <label className="form-group">
-                    First name*
-                    <input className="form-control" type="text" required placeholder="So we can personalise your loot!" onChange={ _handleFNChange }  />
-                </label>
-                <label className="form-group">
-                    Last name*
-                    <input className="form-control" type="text" required placeholder="Last name" onChange={ _handleLNChange }/>
-                </label>
-                <label className="form-group">
-                    Email address*
-                    <input className="form-control" type="email" required placeholder="Don't worry we won't spam you" onChange={ _handleEMChange }/>
-                </label>
-                <button className="btn btn-block">Let's go!</button>
-            </form>
-            <p className="errors">Oops, something doesn't look right!</p>
-        </div>
-        
+    <h2 className="form-header">Join the guild!</h2>
+    <h3 className="form-subheader">Receive loot, the latest news & early-access
+    to the upcoming games.</h3>
+    <div className>
+        <form onSubmit={ _handleSubmit }>
+            <label className="form-group">
+                First name*
+                <input className="form-control" type="text" required placeholder="So we can personalise your loot!" onChange={ _handleFNChange }  />
+            </label>
+            <label className="form-group">
+                Last name*
+                <input className="form-control" type="text" required placeholder="Last name" onChange={ _handleLNChange }/>
+            </label>
+            <label className="form-group">
+                Email address*
+                <input className="form-control" type="email" required placeholder="Don't worry we won't spam you" onChange={ _handleEMChange }/>
+            </label>
+            <button className="btn btn-block">Let's go!</button>
+        </form>
+        <p className="errors">Oops, something doesn't look right!</p>
     </div>
+    
+</div>
   )
 }
 
