@@ -22,6 +22,12 @@ const _handleEMChange = (e) => {
     setEmail(e.target.value);
 };
 
+const clearForm = () => {
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+}
+
 const _handleSubmit = (event) => {
     event.preventDefault();
     const user = {
@@ -33,7 +39,7 @@ const _handleSubmit = (event) => {
     .then((response) => {
         setResponse(response.data);
      })
-     .then(console.log(response))
+     .then(clearForm());
     
     // console.log({'user': {
     //     firstName: firstName//     lastName: lastName,
@@ -49,15 +55,15 @@ return (
             <form onSubmit={ _handleSubmit }>
                 <label className="form-group">
                     First name*
-                    <input className="form-control" type="text" required placeholder="So we can personalise your loot!" onChange={ _handleFNChange }  />
+                    <input className="form-control" type="text" required placeholder="So we can personalise your loot!" onChange={ _handleFNChange } value={ firstName }  />
                 </label>
                 <label className="form-group">
                     Last name*
-                    <input className="form-control" type="text" required placeholder="Last name" onChange={ _handleLNChange }/>
+                    <input className="form-control" type="text" required placeholder="Last name" onChange={ _handleLNChange } value={ lastName}/>
                 </label>
                 <label className="form-group">
                     Email address*
-                    <input className="form-control" type="email" required placeholder="Don't worry we won't spam you" onChange={ _handleEMChange }/>
+                    <input className="form-control" type="email" required placeholder="Don't worry we won't spam you" onChange={ _handleEMChange } value={ email }/>
                 </label>
                 <button className="btn btn-block">Let's go!</button>
             </form>
