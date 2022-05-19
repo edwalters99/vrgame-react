@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import {Animated} from "react-animated-css";
 const SERVER_URL = "http://localhost:3005/users.json"
 // const SERVER_URL = "https://vrg-backend.herokuapp.com/users.json"
 
@@ -102,7 +103,11 @@ return (
             <form onSubmit={ _handleSubmit }>
                 <label className="form-group">
                     First name*
+                   <Animated animationIn="shake" animationOut="shake"> 
                     <input className="form-control" type="text" required placeholder="So we can personalise your loot!" onChange={ _handleFNChange } value={ firstName }  />
+                    </Animated>
+                
+                
                 </label>
                 <label className="form-group">
                     Last name*
