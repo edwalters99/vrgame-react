@@ -4,10 +4,6 @@
   margin: 0;
 }
 
-h1 {
- margin: 0;
-}
-
 body {
   font-family: 'Inter', sans-serif;
   background-color: #A47CF6;
@@ -110,7 +106,7 @@ body {
   margin-bottom: 2em;
 }
 
-.heading  {
+.heading {
   color: #F5F5F5;
   text-align: center;
   font-size: 32px;
@@ -119,25 +115,23 @@ body {
   margin-bottom: 1.3em;
 }
 
-
-
-.navigation{
+.navigation {
   font-size: 32px;
   display: flex ;
   justify-content: space-between;
 }
 
-.logo{
+.logo {
   padding: 37px;
   margin: 25px;
 }
 
-.hamburger{
+.hamburger {
   padding: 37px;
   margin: 25px;
 }
 
-.greyarea{
+.greyarea {
   background-color: #F2F2F2;
   width: 100%;
   height: 338px;
@@ -172,7 +166,7 @@ body {
   margin-bottom: 0.3em;
   }
 
-.comingsoonimg{
+.comingsoonimg {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -184,7 +178,7 @@ body {
   border-radius: 30px;
 }
 
-.comingsoon{
+.comingsoon {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0em;
@@ -217,26 +211,28 @@ body {
   display: none;
 }
 
-
-.success-container{
+.success-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.svg{
+
+.svg {
   width: 301px;
   height: 268px;
-margin-top: 90px;
-transform: scale(1.2)
+  margin-top: 90px;
+  transform: scale(1.2)
 }
-.success-heading{
+
+.success-heading {
   color: #F5F5F5;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
   margin-top: 50px;
 }
-.subheading{
+
+.subheading {
   color: #F5F5F5;
   text-align: center;
   font-size: 15px;
@@ -244,6 +240,7 @@ transform: scale(1.2)
   margin-top: 10px;
 }
 
+/* media queries */
 @media(min-width: 850px) {
   .heading {
     font-size: 3em;
@@ -258,8 +255,7 @@ transform: scale(1.2)
     height: 139px;
     width: 247px;
   }
-
-  .success-heading{
+  .success-heading {
     font-size: 35px;
   }
   .subheading {
