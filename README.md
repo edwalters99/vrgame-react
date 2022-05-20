@@ -1,6 +1,6 @@
 # VRGaming Newsletter Signup
 
-A collaboration with GA UI/UX Immersive Students. This project was completed in 28 hours, working to this [brief.](https://docs.google.com/document/d/1IsF09FzYTUUK_uygoiZt9Jp0YqTsod8bEWKdvavTJdk/edit?usp=sharing) 
+A collaboration with GA UI/UX Immersive Students. This project was completed in 28 hours, working to this [brief / user stories.](https://docs.google.com/document/d/1IsF09FzYTUUK_uygoiZt9Jp0YqTsod8bEWKdvavTJdk/edit?usp=sharing) 
 
 ---------------------------------------------------------------
 
@@ -20,7 +20,11 @@ A collaboration with GA UI/UX Immersive Students. This project was completed in 
 ---------------------------------------------------------------
 ## Screenshots
 Provided Figma Design:
+
+---------------------------------------------------------------
+
 ![Figma](public/screenshots/figma.jpg)
+
 
 <h3>Finished Product: </h3>
 <span><img src="public/screenshots/signup.jpg" width="250" alt="Signup" />
