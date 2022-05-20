@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import crossLogo from '../cross.png'
-// const SERVER_URL = "http://localhost:3000/users.json"
-const SERVER_URL = "https://vrg-backend.herokuapp.com/users.json"
+const SERVER_URL = "http://localhost:3000/users.json"
+// const SERVER_URL = "https://vrg-backend.herokuapp.com/users.json"
 
 function SignUpForm() {
 
@@ -77,6 +77,7 @@ function SignUpForm() {
                     setSuccess(true);
                     setResponse(response.data);
                     setServerError(false);
+                    setSubmitting(false);
                 }
             })
         
@@ -90,6 +91,7 @@ function SignUpForm() {
                 // Request made and server responded
 
                 setServerError(true);
+                setSubmitting(false);
                 console.log(error.response.status);
                 console.log(error.response.headers);
 
@@ -97,11 +99,13 @@ function SignUpForm() {
                 // The request was made but no response was received
                 console.log(error.request);
                 setServerError(true);
+                setSubmitting(false);
 
                 } else {
                 // Something happened in setting up the request that triggered an Error
                 console.log('Error', error.message);
                 setServerError(true);
+                setSubmitting(false);
                 }
             
             });
