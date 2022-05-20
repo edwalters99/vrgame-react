@@ -75,6 +75,15 @@ body {
   transform: scale(1.1);
 }
 
+.inactive {
+  background-color: #B3B3B3;
+}
+
+.inactive:hover {
+  transform: none;
+  cursor:default;
+}
+
 .signupformContainer {
   background-color: #A47CF6;
   width: 70%;

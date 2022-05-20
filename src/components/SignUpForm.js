@@ -11,6 +11,7 @@ function SignUpForm() {
 const [firstName, setFirstName] = useState('');
 const [lastName, setLastName] = useState('');
 const [email, setEmail] = useState('');
+const [submitting, setSubmitting] = useState(false);
 const [response, setResponse] = useState('');
 const [success, setSuccess] = useState(false);
 const [serverError, setServerError] = useState(false);
@@ -60,7 +61,7 @@ const validateEmail = (email) => {
 
 const _handleSubmit = (event) => {
     event.preventDefault();
-  
+   
     const user = {
         firstname: firstName,
         lastname: lastName,
@@ -70,6 +71,7 @@ const _handleSubmit = (event) => {
     setLastNameValid(validateName(user.lastname));
     setEmailValid(validateEmail(user.email));
     if (validateName(user.firstname) && validateName(user.lastname) && validateEmail(user.email)) {
+        setSubmitting(true);
         axios.post(SERVER_URL, { user })
         .then((response) => {
             if (response.data) {
@@ -264,7 +266,7 @@ if (success) {
                         <img class={emailValid ? 'hide' : 'cross'} id="emailCross" src={crossLogo}/>
                         </div>
                     </label>
-                    <button className="btn btn-block">Let's go!</button>
+                    <button className={submitting ? "btn btn-block inactive" : "btn btn-block"}>Let's go!</button>
                 </form>
                 <p className="errors">{(!firstNameValid || !lastNameValid || !emailValid) && `Oops, something doesn't look right!`}</p>
                 <p className="errors">{serverError && `Sorry, we encountered a hiccup with our server!`}</p>
