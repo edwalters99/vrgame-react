@@ -20,7 +20,7 @@ A collaboration with GA UI/UX Immersive Students. This project was completed in 
 ---------------------------------------------------------------
 ## Screenshots
 Provided Figma Design:
-![Figma](public/screenshots/figma.jpg width=400)
+![Figma](public/screenshots/figma.jpg)
 
 <h3>Finished Product: </h3>
 <span><img src="public/screenshots/signup.jpg" width="250" alt="Signup" />
