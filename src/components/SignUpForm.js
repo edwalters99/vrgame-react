@@ -69,39 +69,51 @@ const _handleSubmit = (event) => {
     setFirstNameValid(validateName(user.firstname));
     setLastNameValid(validateName(user.lastname));
     setEmailValid(validateEmail(user.email));
+    if (validateName(user.firstname) && validateName(user.lastname) && validateEmail(user.email)) {
+        axios.post(SERVER_URL, { user })
+        .then((response) => {
+            if (response.data) {
+                setSuccess(true);
+                setResponse(response.data);
+                setServerError(false);
+            }
+         })
     
-    axios.post(SERVER_URL, { user })
-    .then((response) => {
-        if (response.data) {
-            setSuccess(true);
-            setResponse(response.data);
-        }
-     })
-
-     .then(() => {
-        if (emailValid && firstNameValid && lastNameValid)
-        clearForm()
-     })
-     
-     .catch(function (error) {
-        if (error.response) {
-          // Request made and server responded
-          console.log(error.response.data);
-          setServerError(true);
-
-          console.log(error.response.status);
-          console.log(error.response.headers);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.log(error.request);
-          setServerError(true);
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.log('Error', error.message);
-          setServerError(true);
-        }
+         .then(() => {
+            if (emailValid && firstNameValid && lastNameValid)
+            clearForm()
+         })
+         
+         .catch(function (error) {
+            if (error.response) {
+              // Request made and server responded
+              console.log(error.response.data);
+              setServerError(true);
     
-      });
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            } else if (error.request) {
+              // The request was made but no response was received
+              console.log(error.request);
+              setServerError(true);
+            } else {
+              // Something happened in setting up the request that triggered an Error
+              console.log('Error', error.message);
+              setServerError(true);
+            }
+        
+          });
+
+
+
+
+
+
+
+
+
+    }
+   
     } 
 
 return (
