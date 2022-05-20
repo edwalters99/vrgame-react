@@ -12,6 +12,7 @@ const [firstName, setFirstName] = useState('');
 const [lastName, setLastName] = useState('');
 const [email, setEmail] = useState('');
 const [response, setResponse] = useState('');
+const [success, setSuccess] = useState(false);
 const [serverError, setServerError] = useState(false);
 const [firstNameValid, setFirstNameValid] = useState(true);
 const [lastNameValid, setLastNameValid] = useState(true);
@@ -71,9 +72,17 @@ const _handleSubmit = (event) => {
     
     axios.post(SERVER_URL, { user })
     .then((response) => {
-        setResponse(response.data);
+        if (response.data) {
+            setSuccess(true);
+            setResponse(response.data);
+        }
      })
-     .then(clearForm())
+
+     .then(() => {
+        if (emailValid && firstNameValid && lastNameValid)
+        clearForm()
+     })
+     
      .catch(function (error) {
         if (error.response) {
           // Request made and server responded
@@ -103,23 +112,31 @@ return (
             <form onSubmit={ _handleSubmit }>
                 <label className="form-group">
                     First name*
+                    <div className="parent">
                   {/* {emailValid && }<Animated animationIn="shake" animationOut="shake">  */}
                     <input className="form-control" type="text" required placeholder="So we can personalise your loot!" onChange={ _handleFNChange } value={ firstName }  />
+                    <img class={firstNameValid ? 'hide' : 'cross'} src={crossLogo}/>
                     {/* </Animated> */}
-                
+                    </div>
                 
                 </label>
                 <label className="form-group">
+               
                     Last name*
-                    <div className="box">
+                    {/* <div className="icon-input"> */}
+                    <div className="parent">
                         <input className="form-control" type="text" required placeholder="Last name" onChange={ _handleLNChange } value={ lastName}/>
-                        {/* <span className="icon"><img ClassNamesrc={crossLogo}/></span> */}
+                        <img class={lastNameValid ? 'hide' : 'cross'} id="lastNameCross" src={crossLogo}/>
+                </div>
                       
-                    </div>
+                    {/* </div> */}
                 </label>
                 <label className="form-group">
                     Email address*
+                    <div className="parent">
                     <input className="form-control" type="email" required placeholder="Don't worry we won't spam you" onChange={ _handleEMChange } value={ email }/>
+                    <img class={emailValid ? 'hide' : 'cross'} id="emailCross" src={crossLogo}/>
+                    </div>
                 </label>
                 <button className="btn btn-block">Let's go!</button>
             </form>

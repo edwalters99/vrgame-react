@@ -184,3 +184,24 @@ body {
 .icon {
   display: inline;
 }
+
+.icon-input {
+ position: relative;
+}
+
+.parent img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: -10px;
+}
+
+.parent {
+  position: relative;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
