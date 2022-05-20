@@ -89,7 +89,7 @@ body {
   width: 70%;
   margin: 0 auto;
   color: #F5F5F5;
-  max-width: 800px;
+  max-width: 400px;
 }
 
 .form-header {
@@ -118,6 +118,8 @@ body {
   margin-top: -1.3em;;
   margin-bottom: 1.3em;
 }
+
+
 
 .navigation{
   font-size: 32px;
@@ -216,7 +218,6 @@ body {
 }
 
 
-
 .success-container{
   display: flex;
   justify-content: center;
@@ -241,4 +242,20 @@ transform: scale(1.2)
   font-size: 15px;
   font-weight: 400;
   margin-top: 10px;
+}
+
+@media(min-width: 850px) {
+  .heading {
+    font-size: 3em;
+  }
+  .greyheading {
+    font-size: 2rem;
+  }
+  .greyarea {
+    height: 450px;
+  }
+  .pewpew, .comingsoonimg {
+    height: 139px;
+    width: 247px;
+  }
 }
