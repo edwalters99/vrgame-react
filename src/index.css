@@ -205,3 +205,31 @@ body {
 .hide {
   display: none;
 }
+
+
+
+.success-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.svg{
+  width: 301px;
+  height: 268px;
+margin-top: 90px;
+transform: scale(1.2)
+}
+.success-heading{
+  color: #F5F5F5;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+.subheading{
+  color: #F5F5F5;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+}
