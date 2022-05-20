@@ -258,4 +258,15 @@ transform: scale(1.2)
     height: 139px;
     width: 247px;
   }
+
+  .success-heading{
+    font-size: 35px;
+  }
+  .subheading {
+    font-size: 23px;
+  }
+  .svg {
+    transform: scale(1.4);
+    margin-top: 120px;
+  }
 }
