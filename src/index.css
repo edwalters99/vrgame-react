@@ -91,7 +91,7 @@ body {
 
 .form-subheader {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -149,6 +149,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+  border-radius: 30px;
 }
 
 .pewpewgame{
@@ -169,7 +170,7 @@ body {
   width: 165px;
   left: 112px;
   top: 440px;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .comingsoon{
@@ -178,4 +179,8 @@ body {
   letter-spacing: 0em;
   text-align: center;
   margin-top: -.7em;
+}
+
+.icon {
+  display: inline;
 }

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import {Animated} from "react-animated-css";
-const SERVER_URL = "http://localhost:3005/users.json"
+import crossLogo from '../cross.png'
+const SERVER_URL = "http://localhost:3000/users.json"
 // const SERVER_URL = "https://vrg-backend.herokuapp.com/users.json"
 
 
@@ -97,21 +98,24 @@ const _handleSubmit = (event) => {
 return (
     <div className="signupformContainer">
         <h2 className="form-header">Join the guild!</h2>
-        <h3 className="form-subheader">Receive loot, the latest news & early-access
-        to the upcoming games.</h3>
+        <h3 className="form-subheader">Receive loot, the latest news & early access to the upcoming games.</h3>
         <div>
             <form onSubmit={ _handleSubmit }>
                 <label className="form-group">
                     First name*
-                   <Animated animationIn="shake" animationOut="shake"> 
+                  {/* {emailValid && }<Animated animationIn="shake" animationOut="shake">  */}
                     <input className="form-control" type="text" required placeholder="So we can personalise your loot!" onChange={ _handleFNChange } value={ firstName }  />
-                    </Animated>
+                    {/* </Animated> */}
                 
                 
                 </label>
                 <label className="form-group">
                     Last name*
-                    <input className="form-control" type="text" required placeholder="Last name" onChange={ _handleLNChange } value={ lastName}/>
+                    <div className="box">
+                        <input className="form-control" type="text" required placeholder="Last name" onChange={ _handleLNChange } value={ lastName}/>
+                        {/* <span className="icon"><img ClassNamesrc={crossLogo}/></span> */}
+                      
+                    </div>
                 </label>
                 <label className="form-group">
                     Email address*
@@ -121,7 +125,9 @@ return (
             </form>
             <p className="errors">{(!firstNameValid || !lastNameValid || !emailValid) && `Oops, something doesn't look right!`}</p>
             <p className="errors">{serverError && `Sorry, we encountered a hiccup with our server!`}</p>
+            
         </div>
+        
     </div>
   )
 }
