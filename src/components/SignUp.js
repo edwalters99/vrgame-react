@@ -1,5 +1,7 @@
 import React from 'react';
 import SignUpForm from './SignUpForm';
+import game1 from '../game1.jpeg'
+import game2 from '../game2.jpeg'
 
 function SignUp() {
   return (
@@ -36,9 +38,9 @@ function SignUp() {
       </div>
       <div className='greyarea'>
           <h1 className='greyheading'>Our Games</h1>
-          <img className='pewpew' src='https://s3-alpha-sig.figma.com/img/0064/1e59/08175aee22829b04710db22554cdee16?Expires=1653868800&Signature=h1H2MaFQLS~EmlKnIT76WjLPo5b7tMU8c9hhIOgo5Hnt-SPCNNrxVfDpsRrcNGuO1G0yhtjnBEeU4eROJGuoAfOQGiqO6ucZY-xrUeIulatLcOkg8vv3qeMRJbT2ety28nbfOTG9kQ1QaWo-EcNohXfCU1A65sUYLy8ChSJZZdZqmgGnlkzIy51jAMpOAEDonpsfjA4K-gVARIfyfCN9Txdp7xdev0QjnMXa1X84WwJUCKeAwpNibBF9qO~rIl2t-dbmmRjfOKyj9UwOMpXfvJt46U9xi5uiupZNN6dEO9z5S01VNaLrPiEf5UfGx95aeFUQ7ZNolkX-U5aFBedxQw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'></img>
+          <img className='pewpew' src={game1}></img>
           <h1 className='pewpewgame'>Pew Pew Game</h1>
-          <img className= 'comingsoonimg' src='https://s3-alpha-sig.figma.com/img/50ca/5e3c/132472ccf798186d9e2a327f7251e75c?Expires=1653868800&Signature=Og3pfyPk9hoJiUMfAjUdqWbCumCXWWEcHQE39ofOfkSCUcBKEJBMS1s6BzQ3bvpGiHuBk6--kY7iJdK0odEE5px7i0DIqx1UaT4tSQr1JHav6bsJ1b6Rz3XbFfyGhucknlfd5tlTOe0aYgbqEmFr6ytn611WXiIPqX0Ej4~OzLsTj22Pq9Q7o2OS6j606VKP6tM3r1bechEwYoplxmyHAQ-JuPhCpuusTUCtHvbgf1di~Zz0lDgLhRLUNmugdDr4ApOxCc33gds-4sFQfmo~~lZf8raSI5q3VKrc6fT9XEwctQOmm53EzwHxpZFRoDWzxYhXPOIsN9gigVQMO1wNSw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'></img>
+          <img className= 'comingsoonimg' src={game2}></img>
           <h1 className='comingsoon'>Coming soon</h1>
       </div>
 
